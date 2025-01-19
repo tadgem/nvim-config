@@ -79,6 +79,10 @@ return {
     {"stevearc/overseer.nvim"}
   },
 
+  {
+    {"nvim-telescope/telescope-ui-select.nvim"}
+  },
+
   -- add cmake tools
   { 
     "Civitasv/cmake-tools.nvim",
