@@ -8,18 +8,14 @@
 -- * add extra plugins
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
-print("Example Hello")
-
 
 return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
 
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "catppuccin",
     },
   },
 
@@ -68,23 +64,28 @@ return {
 
   -- ToggleTerm
   {
-    {'akinsho/toggleterm.nvim', version = "*", opts = {--[[ things you want to change go here]]}}
+    {
+      "akinsho/toggleterm.nvim",
+      version = "*",
+      opts = {--[[ things you want to change go here]]
+      },
+    },
   },
 
   {
-    {'nvim-lua/plenary.nvim'}
+    { "nvim-lua/plenary.nvim" },
   },
 
   {
-    {"stevearc/overseer.nvim"}
+    { "stevearc/overseer.nvim" },
   },
 
   {
-    {"nvim-telescope/telescope-ui-select.nvim"}
+    { "nvim-telescope/telescope-ui-select.nvim" },
   },
 
   -- add cmake tools
-  { 
+  {
     "Civitasv/cmake-tools.nvim",
   },
 
@@ -185,7 +186,7 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "tsx",
         "typescript",
-        "cmake"
+        "cmake",
       })
     end,
   },
@@ -219,7 +220,7 @@ return {
 
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
-    
+
   -- add any tools you want to have installed below
   {
     "williamboman/mason.nvim",
@@ -230,7 +231,6 @@ return {
         "shfmt",
         "flake8",
         "cmakelang",
-        "cmakelint",
       },
     },
   },
